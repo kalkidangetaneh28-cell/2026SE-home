@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>🎓 DMU · SE 3rd Year | Class of 2026</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #f0f4fa, #e1eaf8, #dae5f0, #f0f0fa, #f5f0fa);
+            background-size: 400% 400%;
+            animation: studentGradient 16s ease infinite;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            margin: 0;
+            padding: 16px;
+        }
+
+        @keyframes studentGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hearts-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            color: rgba(173, 200, 230, 0.4);
+            font-size: 24px;
+            animation: floatHeart 10s linear infinite;
+        }
+
+        @keyframes floatHeart {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+            100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+        }
+
+        .wedding-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 50px 20px 50px 20px;
+            box-shadow: 0 30px 50px rgba(120, 140, 180, 0.3), 0 10px 20px rgba(200, 210, 240, 0.5);
+            padding: 2.5rem 2rem;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            z-index: 20;
+            border: 3px solid rgba(240, 245, 255, 0.9);
+            animation: gentleFloat 1.2s ease-out;
+            margin: 20px 0;
+        }
+
+        @keyframes gentleFloat {
+            0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #2c4b7a;
+            text-shadow: 3px 3px 0 #dfe9ff, 5px 5px 0 rgba(170, 200, 240, 0.5);
+            margin-bottom: 0.3rem;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #3a5f8b;
+            background: rgba(235, 245, 255, 0.7);
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            border-radius: 40px;
+            margin: 1rem 0 1.8rem;
+            border: 1px solid #b0c8f0;
+        }
+
+        /* Welcome section */
+        .welcome-box {
+            background: rgba(255, 248, 235, 0.8);
+            border-radius: 40px;
+            padding: 2rem;
+            margin: 1rem 0;
+            border: 2px solid #ffefd0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .welcome-box p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #2c4b7a;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-box strong {
+            color: #d4a373;
+            font-weight: 700;
+        }
+
+        .class-stats {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .stat {
+            background: white;
+            border-radius: 30px;
+            padding: 0.6rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2a4d7a;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .signature {
+            font-size: 1.3rem;
+            color: #2f557a;
+            background: #e2edff;
+            display: inline-block;
+            padding: 0.4rem 2rem;
+            border-radius: 40px;
+            font-style: italic;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.1rem; }
+            .welcome-box p { font-size: 1rem; }
+            .stat { font-size: 0.85rem; padding: 0.4rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts-bg" id="heartContainer"></div>
+
+    <div class="wedding-card">
+        <h1>🎓 DMU · SE 3rd Year</h1>
+        <div class="subtitle">class of 2026 · 53 software engineers</div>
+
+        <!-- Home page content: intro about Debre Markos University and the class -->
+        <div class="welcome-box">
+            <p><strong>✨ Welcome, fellow classmates! ✨</strong></p>
+            <p>We are <strong>53 passionate students</strong> from the <strong>Software Engineering department</strong> at <strong>Debre Markos University</strong>. This is our digital home — a place to celebrate our journey, share memories, and stay connected as we move forward together.</p>
+            <p>From late‑night coding sessions to unforgettable group projects, every moment has shaped who we are. Let this page be a reminder of the friendships, challenges, and victories we’ve shared.</p>
+            <div class="class-stats">
+                <span class="stat"><i class="fas fa-users"></i> 53 students</span>
+                <span class="stat"><i class="fas fa-university"></i> Debre Markos University</span>
+                <span class="stat"><i class="fas fa-laptop-code"></i> Software Engineering</span>
+                <span class="stat"><i class="fas fa-calendar-alt"></i> 3rd Year · 2026</span>
+            </div>
+        </div>
+
+        <div class="signature">
+            <i class="fas fa-star" style="color:#f5b342;"></i> with best wishes, your classmates
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+    <script>
+        (function() {
+            // Floating stars
+            const heartContainer = document.getElementById('heartContainer');
+            function createStar() {
+                const star = document.createElement('div');
+                star.classList.add('heart');
+                star.innerHTML = '⭐';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.fontSize = (15 + Math.random() * 30) + 'px';
+                star.style.animationDuration = (6 + Math.random() * 8) + 's';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.opacity = 0.5 + Math.random() * 0.4;
+                star.style.color = 'rgba(255, 215, 140, 0.5)';
+                return star;
+            }
+            for (let i = 0; i < 25; i++) heartContainer.appendChild(createStar());
+
+            // maintain star count
+            setInterval(() => {
+                if (heartContainer.children.length < 35) heartContainer.appendChild(createStar());
+                else { heartContainer.removeChild(heartContainer.firstChild); heartContainer.appendChild(createStar()); }
+            }, 3000);
+
+            // initial confetti
+            window.addEventListener('load', () => setTimeout(() => confetti({ particleCount: 30, spread: 45, origin: { y: 0.5 }, colors: ['#f9e0a0'] }), 600));
+        })();
+    </script>
+</body>
+</html>
